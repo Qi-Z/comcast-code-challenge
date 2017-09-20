@@ -1,7 +1,18 @@
 # ComcastCodeChallenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+This is a coding challenge from Comcast. 
 
+## Tour of the web application
+The application contains three pages.
+
+The first page shows a list of orders from data.json.
+
+The second page contains the list of orders from data.json. Users can sort by different properties of the order by clicking on the table headers (name, category, and amount).
+
+The third page show the processed data in a more compact table.
+
+
+=================================================================
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -20,8 +20,11 @@ export class ProductListProcessedComponent implements OnInit {
       this.products = products;
 
       this.products.forEach(product => {
+        // Compute the set of categories and names
         this.categories.add(product.category);
         this.productNames.add(product.name);
+
+        // Record the amount for the order per category
         if (!this.enhancedProducts.has(product.name)) {
           this.enhancedProducts.set(product.name, new Map());
         }
