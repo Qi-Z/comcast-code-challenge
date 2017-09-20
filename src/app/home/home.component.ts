@@ -15,16 +15,7 @@ export class HomeComponent implements OnInit {
   
   ngOnInit() {
     this.productService.getProducts().subscribe((products: Product[])=> {this.products = products;});
-    // let product1 = new Product();
-    // product1.amount = 5;
-    // product1.category = "fruit";
-    // product1.name = "apple"
-    // let product2 = new Product();
-    // product2.amount = 10;
-    // product2.category = "fruit";
-    // product2.name = "banan";
-    // this.products.push(product1);
-    // this.products.push(product2);
+
   }
 
 }
