@@ -1,10 +1,10 @@
-<div>
-    <table>
+<div  class="container">
+    <table class="table table-bordered">
         <tr>
             <th >Name</th>
             <th *ngFor="let category of categories">{{category}}</th>
         </tr>
-        <tr *ngFor="let productName of enhancedProducts.keys()">
+        <tr *ngFor="let productName of productNames">
             <th>{{productName}}</th>
             <th *ngFor="let category of categories">{{enhancedProducts.get(productName).get(category)}}</th>
         </tr>

@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class OrderByPipe implements PipeTransform {
 
   transform(products: Array<any>, args?: any): any {
-    // console.log(products);
-    return products.sort(function(a, b){
+    
+    return products? products.sort(function(a, b){
       if(a[args.property] < b[args.property]){
         return args.isDesc? 1: -1;
       }else if(a[args.property] > b[args.property]){
@@ -15,7 +15,7 @@ export class OrderByPipe implements PipeTransform {
       }else{
         return 0;
       }
-    });
+    }): products;
   }
 
 }

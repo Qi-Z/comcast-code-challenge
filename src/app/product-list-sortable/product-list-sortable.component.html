@@ -1,15 +1,21 @@
-<div>
-    <table>
-        <tr>
-            <th (click) = "sort('name')">Name</th>
-            <th (click) = "sort('category')">Category</th>
-            <th (click) = "sort('amount')">Amount</th>
-        </tr>
-        <tr *ngFor="let product of products  | orderBy: {property: column, isDesc: isDesc}">
-            <th>{{product.name}}</th>
-            <th>{{product.category}}</th>
-            <th>{{product.amount}}</th>
-        </tr>
+<div class="container">
+  <table class="table table-bordered">
+    <tr>
+      <th class="pointer" (click)="sort('name')">Name <i class="fa" [ngClass]="{'fa-sort': column != 'name', 
+                        'fa-sort-asc': (column == 'name' && !isDesc), 
+                        'fa-sort-desc': (column == 'name' && isDesc) }"> </i></th>
+      <th class="pointer" (click)="sort('category')">Category<i class="fa" [ngClass]="{'fa-sort': column != 'category', 
+                        'fa-sort-asc': (column == 'category' && !isDesc), 
+                        'fa-sort-desc': (column == 'category' && isDesc) }"> </i></th>
+      <th class="pointer" (click)="sort('amount')">Amount<i class="fa" [ngClass]="{'fa-sort': column != 'amount', 
+                        'fa-sort-asc': (column == 'amount' && !isDesc), 
+                        'fa-sort-desc': (column == 'amount' && isDesc) }"> </i></th>
+    </tr>
+    <tr *ngFor="let product of products  | orderBy: {property: column, isDesc: isDesc}">
+      <th>{{product.name}}</th>
+      <th>{{product.category}}</th>
+      <th>{{product.amount}}</th>
+    </tr>
 
-    </table>
+  </table>
 </div>
