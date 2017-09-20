@@ -10,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListSortableComponent implements OnInit {
   products: Product[];
-  isDesc: boolean = true;
-  column: string;
+  isDesc: boolean = false;
+  column: string = "name";
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class ProductListSortableComponent implements OnInit {
   }
 
   sort(property){
-    console.log("called");
+
     this.isDesc = !this.isDesc;
     this.column = property; // which column
   }

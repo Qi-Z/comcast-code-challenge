@@ -1,3 +1,14 @@
-<p>
-  product-list-processed works!
-</p>
+<div>
+    <table>
+        <tr>
+            <th >Name</th>
+            <th *ngFor="let category of categories">{{category}}</th>
+        </tr>
+        <tr *ngFor="let productName of enhancedProducts.keys()">
+            <th>{{productName}}</th>
+            <th *ngFor="let category of categories">{{enhancedProducts.get(productName).get(category)}}</th>
+        </tr>
+
+    </table>
+      
+</div>
